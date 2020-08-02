@@ -9,6 +9,8 @@ import java.util.Scanner;
  * 백준 2750
  * 수 정렬하기
  * N개의 숫자를 오름차순 정렬
+ * for문 2개를 돌며 수 비교
+ * 시간이 상당히 오래 걸림..
  */
 public class Ascending_practice {
 	private static int N;
