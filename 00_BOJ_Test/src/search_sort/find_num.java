@@ -2,6 +2,11 @@ package search_sort;
 
 import java.util.Scanner;
 
+/**
+ * 백준 1920
+ * 주어진 정수에서
+ * X라는 정수가 존재하는지 찾는 문제
+ * */
 public class find_num {
 	private static int N,M,numbers[];
 	public static void main(String[] args) {
