@@ -29,7 +29,7 @@ public class Ascending_practice {
 		for( int i = 0; i < N; i++) {
 			int input_number = sc.nextInt(); // 입력
 			sorted_numbers[i] = input_number;
-			for ( int j = i; j >= 0 ; j--) {
+			for ( int j = i/2; j >= 0 ; j--) {
 				if(sorted_numbers[j] >= input_number) { // 현재 배열의 값이 입력 값보다 크다면
 					int temp = sorted_numbers[j];
 					sorted_numbers[j] = input_number;
