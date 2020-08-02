@@ -43,5 +43,4 @@ public class Ascending_practice {
 			System.out.println(sorted_numbers[i]);
 		sc.close();
 	}
-
 }
