@@ -42,7 +42,6 @@ public class Editor_Double_Stack {
 		}
 		
 		int command_amount = Integer.parseInt(br.readLine());
-		int cursur = 0;
 		
 		for( int i = 0; i < command_amount; i++) {
 			String command = br.readLine();
