@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  * 백준 10866
- * Deque를 API를 활용해서 구현해 보자
+ * Deque를 API를 활용해서 구현해 보자 
  */
 public class Deque_Practice {
 	private static int N;
