@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 주어진 정수에서
  * X라는 정수가 존재하는지 찾는 문제
  * for문 2개를 돌며 해당 숫자가 있으면
- * 1을 출력 없으면 0을 출력
+ * 1을 출력 없으면 0을 출력 
  * */
 public class find_num {
 	private static int N,M,numbers[];
