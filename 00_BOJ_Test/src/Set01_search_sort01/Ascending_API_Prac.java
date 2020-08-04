@@ -10,12 +10,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
+ * 백준 2750
  * 정렬하려는 숫자가 상당히 !!!! 크므로
  * 일반적으로 정렬을 하면 시간이 엄청엄청 걸린다
  * API를 적극 활용해보자
  */
 public class Ascending_API_Prac{
-	private static int N, numbers[];
+	private static int N, numbers[]; 
 	/** @param args*/
 	public static void main(String[] args) throws IOException {
 		Ascending_API_Prac aap = new Ascending_API_Prac();
