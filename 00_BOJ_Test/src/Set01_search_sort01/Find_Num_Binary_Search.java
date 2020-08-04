@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
 import sun.util.locale.StringTokenIterator;
 
 /**
- * 백준 10815
+ * 백준 10815 
  * 상근이가 가지고 있는 숫자 찾기
  * 숫자가 엄청나게 크고 많으므로
  * 2진 탐색을 이용해서 찾아보자
