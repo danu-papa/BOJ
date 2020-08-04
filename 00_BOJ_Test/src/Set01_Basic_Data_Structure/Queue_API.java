@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Basic_Data_Structure;
+package Set01_Basic_Data_Structure;
 
 import java.util.LinkedList;
 import java.util.Queue;
