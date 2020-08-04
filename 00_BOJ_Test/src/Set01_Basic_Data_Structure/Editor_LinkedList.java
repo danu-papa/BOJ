@@ -18,7 +18,7 @@ import java.util.StringTokenizer;
  * List를 이용해서 만들어보자
  * size 계속해서 호출해서
  * 시간초과
- * 다른 방법을 찾아야 할 듯
+ * 다른 방법을 찾아야 할 듯 
  */
 public class Editor_LinkedList {
 
