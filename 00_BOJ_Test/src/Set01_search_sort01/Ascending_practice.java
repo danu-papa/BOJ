@@ -1,7 +1,7 @@
 /**
  * 
  */
-package search_sort;
+package Set01_search_sort01;
 
 import java.util.Scanner;
 
