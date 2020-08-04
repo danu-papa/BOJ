@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /**
- * 백준 10989 - 수 정렬하기
+ * 백준 10989 - 수 정렬하기 
  * 정말 정말 수가 많고
  * 중복 값도 정말 많아서 
  * 정렬을 하면 시간 초과가 쉽게 난다!!
