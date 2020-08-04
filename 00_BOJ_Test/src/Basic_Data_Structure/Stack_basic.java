@@ -14,7 +14,7 @@ import java.util.Scanner;
  * EMPTY : 비었으면 1, 아니면 0
  * TOP : 스택 가장 위의 수를 출력. 없으면 -1
  */
-public class Stack {
+public class Stack_basic {
 	private static int top, stack[];
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
