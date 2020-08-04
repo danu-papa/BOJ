@@ -15,7 +15,7 @@ import java.util.Scanner;
  * SIZE : 스택에 들어있는 정수 개수 출력
  * EMPTY : 비었으면 1, 아니면 0
  * FRONT : 큐 가장 앞의 수를 출력. 없으면 -1
- * BACK : 큐 가장 뒤의 수를 출력, 없으면 -1
+ * BACK : 큐 가장 뒤의 수를 출력, 없으면 -1 
  */
 public class Queue_API {
 	private static int N;
