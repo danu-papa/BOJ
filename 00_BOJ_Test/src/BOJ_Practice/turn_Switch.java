@@ -1,7 +1,9 @@
 package BOJ_Practice;
 
 import java.util.Scanner;
-
+/**
+ * 백준 1244번
+ * 스위치 켜고 끄기*/
 public class turn_Switch {
 	private static int N,switchs[],stu_n;
 	public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class turn_Switch {
 		
 		for(int i = 1; i <= N; i++) {
 			switchs[i] = sc.nextInt();
-		} // 스위치 정보 입력
+		} // 스위치 정보 입력 
 		
 		// 학생 수
 		stu_n = sc.nextInt();
