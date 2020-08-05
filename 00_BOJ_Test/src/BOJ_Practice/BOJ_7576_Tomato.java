@@ -65,6 +65,7 @@ public class BOJ_7576_Tomato {
 			for( int j = 0; j < M; j++) {
 				if(box[i][j] == 0) {
 					System.out.println("-1");
+					sc.close();
 					return;
 				}
 			}
