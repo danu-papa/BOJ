@@ -26,8 +26,8 @@
 * [BOJ_1920_find_num.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set01_search_sort01/find_num.java)
 
 ---
-### Set02_Search_Sort02
-* [BOJ_1026_Treasure.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Search_Sort02/BOJ_1026_Treasure.java)
+### Set01_Search_Sort02
+* [BOJ_1026_Treasure.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set01_Search_Sort02/BOJ_1026_Treasure.java)
 
 ---
 ### Set03_DFS_BFS
