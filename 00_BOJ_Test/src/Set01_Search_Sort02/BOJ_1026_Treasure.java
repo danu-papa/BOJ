@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Set02_Search_Sort02;
+package Set01_Search_Sort02;
 
 import java.util.Collections;
 import java.util.Scanner;
