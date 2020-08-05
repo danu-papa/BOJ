@@ -10,7 +10,7 @@ import java.util.Stack;
 import java.util.StringTokenizer;
 
 /**
- * 2020_07_30_알고리즘3일차 과제
+ * 2020_07_30_알고리즘3일차 과제 
  * 백준 사이트 2493번
  * N개의 탑을 왼->오 방향으로 세움
  * 6 9 5 7 4 의 탑이라고 하면
