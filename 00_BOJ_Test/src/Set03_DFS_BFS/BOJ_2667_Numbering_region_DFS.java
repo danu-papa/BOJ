@@ -1,7 +1,7 @@
 /**
  * 
  */
-package BOJ_Practice;
+package Set03_DFS_BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
