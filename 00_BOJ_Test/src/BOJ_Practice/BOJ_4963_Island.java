@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 백준 4963 - 섬의 개수 세기
  * 가로 세로 대각선으로 인접한 섬이 있다면 
  * 걸어서 갈 수 있는 섬.
- * 탐색해보자
+ * 탐색해보자 
  */
 public class BOJ_4963_Island {
 	private static int W,H, map[][], num_island;
