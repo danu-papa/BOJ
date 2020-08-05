@@ -1,6 +1,7 @@
 # BOJ
 ---
 ### BOJ_Practice
+* BOJ_2667_Numbering_region_BFS.java
 * BOJ_4963_Island.java
 * BOJ_7576_Tomato.java
 * JO_1863_Religion.java
