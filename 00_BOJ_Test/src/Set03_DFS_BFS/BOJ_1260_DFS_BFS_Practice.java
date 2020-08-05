@@ -39,7 +39,7 @@ public class BOJ_1260_DFS_BFS_Practice {
 			int x = Integer.parseInt(stt.nextToken());
 			
 			vertex[y][x] = 1;
-			vertex[x][y] = 1;
+			vertex[x][y] = 1; 
 		}
 
 		dfs(start_vertex);
