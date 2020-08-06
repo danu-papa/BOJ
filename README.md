@@ -1,6 +1,8 @@
 # BOJ
 ---
 ### BOJ_Practice
+* [BOJ_5585_Penny.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_5585_Penny.java)
+* [BOJ_1931_MeetingRoom.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_1931_MeetingRoom.java)
 * [BOJ_4963_Island.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_4963_Island.java)
 * [BOJ_7576_Tomato.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_7576_Tomato.java)
 * [JO_1863_Religion.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/JO_1863_Religion.java)
