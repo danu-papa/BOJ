@@ -70,6 +70,7 @@ public class BOJ_1931_MeetingRoom {
 				result++;
 			}
 		}
+		
 		maxValue = result > maxValue ? result : maxValue;
 
 		System.out.println(maxValue);
