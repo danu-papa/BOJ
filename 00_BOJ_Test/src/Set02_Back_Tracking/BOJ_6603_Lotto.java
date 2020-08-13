@@ -16,10 +16,42 @@ import java.util.StringTokenizer;
  * 조합 쓰면 되겠다.
  */
 public class BOJ_6603_Lotto {
+	static int N, number[],input[];
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer stt = new StringTokenizer(br.readLine());
 		
+		while(true) {
+			StringTokenizer stt = new StringTokenizer(br.readLine());
+			N = Integer.parseInt(stt.nextToken());
+			
+			if(N == 0) break;
+			
+			input = new int[N];
+			number = new int[6];
+
+			for( int i = 0; i < N; i++) {
+				input[i] = Integer.parseInt(stt.nextToken());
+			}
+
+			combination(0,0);
+			System.out.println();
+		}
+	}
+
+	
+	/** 조합*/
+	private static void combination(int start, int cnt) {
+		if(cnt == 6) {
+			for( int i = 0; i < 6; i++) {
+				System.out.print(number[i] + " ");
+			}
+			System.out.println();
+			return;
+		}
 		
+		for( int i = start; i < N; i++) {
+			number[cnt] = input[i];
+			combination(i+1, cnt+1);
+		}
 	}
 }
