@@ -3,9 +3,13 @@
  */
 package Set02_Back_Tracking;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+/**
+ * 백준 9663 - N-Queen
+ * 크기 N x N 퀸 N개를 서로 공격할 수 없게 놓는 문제
+ * 퀸을 놓는 방법의 수
+ * 퀸은 상 하 좌 우 대각선 모두 공격할 수 있는 체스말이다.
+ */
+import java.util.Scanner;
 
 /**
  * 백준 9663 - N-Queen
@@ -18,11 +22,10 @@ public class BOJ_9663_N_Queen {
 	static int dy[] = {-1, 1, 0, 0, -1, 1, -1, 1};
 	static int N, map[][], totalCnt, Qcnt;
 
-	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer stt = new StringTokenizer(br.readLine());
-		N = Integer.parseInt(stt.nextToken());
-		
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		N = sc.nextInt();
 		map = new int[N][N]; // 0으로 초기화
 		totalCnt = 0;
 		Qcnt = 0;
@@ -30,6 +33,7 @@ public class BOJ_9663_N_Queen {
 		place_queen_pos(0); // y, x 좌표
 		
 		System.out.println(totalCnt);
+		sc.close();
 	}
 
 	/** 퀸 자리 잡기.*/
@@ -65,9 +69,10 @@ public class BOJ_9663_N_Queen {
 			// 8방 탐색을 다 하고 여기로 왔다는 것은, 8방향 어디에도 퀸이 없다는 것을 뜬한다.
 			map[y][j] = -1; // 퀸 배치
 			Qcnt++;
-			place_queen_pos(y + 1); // 여기를 나오는 순간 해당 열의 퀸의 자리를 없애야한다.
+			place_queen_pos(y + 1); // 여기를 나오는 순간 해당 열의 퀸을 재배치 해야 한다.
 			map[y][j] = 0;
 			Qcnt--;
 		}
 	}
 }
+
