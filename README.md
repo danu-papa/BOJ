@@ -28,10 +28,15 @@
 * [BOJ_10989_Ascending_sequence_practice.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set01_search_sort01/Ascending_sequence_practice.java)
 * [BOJ_10815_Find_Num_Binary_Search.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set01_search_sort01/Find_Num_Binary_Search.java)
 * [BOJ_1920_find_num.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set01_search_sort01/find_num.java)
+* [BOJ_1026_Treasure.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set01_search_sort01/BOJ_1026_Treasure.java)
 
 ---
-### Set01_Search_Sort02
-* [BOJ_1026_Treasure.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set01_Search_Sort02/BOJ_1026_Treasure.java)
+### Set02_Back_Tracking
+* [BOJ_1182_Subset_Sum.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_1182_Subset_Sum.java)
+* [BOJ_6603_Lotto](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_6603_Lotto.java)
+* [BOJ_9663_N_Queen_Array](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen_Array.java)
+* [BOJ_9663_N_Queen_List](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen_List.java)
+* [BOJ_9663_N_Queen](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen.java)
 
 ---
 ### Set03_DFS_BFS
