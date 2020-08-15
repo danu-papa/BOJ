@@ -17,7 +17,7 @@ import java.util.StringTokenizer;
  * 새로줄에서 자신이 들어갈 숫자 찾기
  * 자신이 있는 작은 9칸에서 들어갈 숫자 찾기
  * 3가지 검사를 마치고 나온 숫자가 존재한다면 해당 숫자를 가지고
- * DFS수행
+ * DFS수행, BackTracking
  */
 public class BOJ_2580_Sudoku {
 	static int[][] sudoku;
