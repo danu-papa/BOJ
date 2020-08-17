@@ -24,6 +24,7 @@ public class BOJ_2606_New_Virus {
 	static boolean visited[];
 	
 	public static void main(String[] args) throws Exception {
+		// 속도 개선을 위해 BufferedReader, StringTokenizer 이용
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer stt = new StringTokenizer(br.readLine());
 		
@@ -39,21 +40,22 @@ public class BOJ_2606_New_Virus {
 			stt = new StringTokenizer(br.readLine());
 			int vertex = Integer.parseInt(stt.nextToken());
 			int conntected_vertex = Integer.parseInt(stt.nextToken());
-			graph[vertex][conntected_vertex] = 1;
-			graph[conntected_vertex][vertex] = 1;
+			graph[vertex][conntected_vertex] = 1; // 해당 정점 연결
+			graph[conntected_vertex][vertex] = 1; // 양방향이므로 반대쪽도 연결
 		} // 연결된 정점들의 정보를 입력받음
 		
 		// 1번 정점부터 시작
 		bfs(1);
 		System.out.println(totalCnt);
 	}
+	
 	/** Breadth First Search */
 	private static void bfs(int start) {
 		Queue<Integer> queue = new LinkedList<>();
 		queue.offer(start); // 1번정점 큐에 저장
 		visited[start] = true; // 1번 정점 방문
 		
-		while(!queue.isEmpty()) { // 큐에 원소가 하나라도 있으면
+		while(!queue.isEmpty()) { // 큐에 원소가 하나라도 있으면 계속 반복
 			int vertex = queue.poll(); // 현재 정점을 알려준다
 		
 			for( int i = 1; i <= VERTEXS; i++) { // 연결된 모든 정점들의 정보를 얻어야한다.
