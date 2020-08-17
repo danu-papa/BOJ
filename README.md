@@ -32,14 +32,20 @@
 
 ---
 ### Set02_Back_Tracking
+* [BOJ_2580_Sudoku.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_2580_Sudoku.java)
 * [BOJ_1182_Subset_Sum.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_1182_Subset_Sum.java)
-* [BOJ_6603_Lotto](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_6603_Lotto.java)
-* [BOJ_9663_N_Queen_Array](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen_Array.java)
-* [BOJ_9663_N_Queen_List](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen_List.java)
-* [BOJ_9663_N_Queen](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen.java)
+* [BOJ_6603_Lotto.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_6603_Lotto.java)
+* [BOJ_9663_N_Queen_Array.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen_Array.java)
+* [BOJ_9663_N_Queen_List.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen_List.java)
+* [BOJ_9663_N_Queen.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set02_Back_Tracking/BOJ_9663_N_Queen.java)
 
 ---
 ### Set03_DFS_BFS
+* [BOJ_2606_New_Virus.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set03_DFS_BFS/BOJ_2606_New_Virus.java)
 * [BOJ_1260_DFS_BFS_Practice.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set03_DFS_BFS/BOJ_1260_DFS_BFS_Practice.java)
 * [BOJ_2667_Numbering_region_DFS.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set03_DFS_BFS/BOJ_2667_Numbering_region_DFS.java)
 * [BOJ_2667_Numbering_region_BFS.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set03_DFS_BFS/BOJ_2667_Numbering_region_BFS.java)
+
+---
+### Set06
+* [MST - BOJ_2887_Planet_Tunnel.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/Set06/MST/BOJ_2887_Planet_Tunnel.java)
