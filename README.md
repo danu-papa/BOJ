@@ -1,6 +1,8 @@
 # BOJ
 ---
 ### BOJ_Practice
+* [BOJ_2206_Move_While_Breaking_Wall.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_2206_Move_While_Breaking_Wall.java)
+* [JO_1733_Oh_Mock.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/JO_1733_Oh_Mock.java)
 * [BOJ_1697_숨바꼭질.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_1697_%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88.java)
 * [BOJ_2961_TastyFood.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_2961_TastyFood.java)
 * [BOJ_5585_Penny.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_5585_Penny.java)
