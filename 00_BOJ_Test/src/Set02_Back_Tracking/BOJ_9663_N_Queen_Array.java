@@ -52,11 +52,9 @@ public class BOJ_9663_N_Queen_Array {
 
 		Loop:
 			for( int i = 0; i < N; i++) {
-				if( Qcnt > 0) {
-					for( int j = 0; j < Qcnt; j++) {
-						if(queens[j] - i == 0 || Math.abs(queens[j] - i) == Math.abs(y - j) ) {
-							continue Loop;
-						}
+				for( int j = 0; j < Qcnt; j++) {
+					if(queens[j] - i == 0 || Math.abs(queens[j] - i) == Math.abs(y - j) ) {
+						continue Loop;
 					}
 				}
 				queens[y] = i; 
