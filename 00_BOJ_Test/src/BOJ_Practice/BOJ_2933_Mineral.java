@@ -103,12 +103,11 @@ public class BOJ_2933_Mineral {
 	 * 그럼 공중에 있는 클러스터들은 얼마나 내려야 할까?
 	 * 클러스터 번호를 벗어나서 위로 몇 개 있는지 찾아야한다*/
 	private static void moveCluster() {
-		if(clusterCnt == 2) return; // 클러스터가 1개뿐이면 내릴 필요가 없다.
+		if(clusterCnt == 1) return; // 클러스터가 1개뿐이면 내릴 필요가 없다.
 		
-		visited = new boolean[clusterCnt];
+		visited = new boolean[clusterCnt+1];
 		
 		// 2개 이상일 때만 확인하고 내린다.
-		// 막혔어 ㅠㅠㅠㅠㅠㅠㅠ
 		if(mlist.isEmpty()) return;
 		int size = mlist.size();
 		
@@ -126,16 +125,18 @@ public class BOJ_2933_Mineral {
 			int min = Integer.MAX_VALUE;
 			int idx = i;
 			
-			int down_x = mlist.get(i).x;
+			int down_x = mlist.get(i).x; // 현재 클러스터 위치
 			int down_y = mlist.get(i).y;
 			
 			while(true) {
-				if(visited[mlist.get(idx).cluster]) continue;
-				down_y++;
+				// 이미 방문했으면 패스
+				if(visited[mlist.get(idx).cluster]) continue; 
+				down_y++; // y++
 				
 				if(down_y >= R) {
 					idx++;
 					if(idx == size) {
+						// 최소값 구하기
 						min = Math.min(min, cnt);
 						break;
 					}
@@ -162,9 +163,10 @@ public class BOJ_2933_Mineral {
 					cnt = 0;
 					continue;
 				}
-				cnt++;
+				cnt++; // 내릴 카운트
 			}
 			
+			// 클러스터 내리기.
 			next_mineral:
 			for(int j = 0; j < size; j++) {
 				if(mlist.get(j).cluster == cur_cluster) {
@@ -172,17 +174,19 @@ public class BOJ_2933_Mineral {
 					int tmp_x = mlist.get(j).x;
 					int tmp_y = mlist.get(j).y;
 					
+					// jump의 수 만큼 전체 클러스터를 이동한다.
 					while(map[tmp_y+min*jump][tmp_x] != '.') {
 						jump++;
 						if(tmp_y+min*jump >= R) continue next_mineral;
 					}
+					// 클러스터 이동.
 					map[tmp_y][tmp_x] = '.';
 					cluster_map[tmp_y][tmp_x] = 0;
 					map[tmp_y+min*jump][tmp_x] = 'x';
 					cluster_map[tmp_y+min*jump][tmp_x] = cur_cluster;
 				}
 			}
-			visited[cur_cluster] = true;
+			visited[cur_cluster] = true; // 해당 클러스터 방문 표시.
 		}
 	}
 
@@ -217,6 +221,7 @@ public class BOJ_2933_Mineral {
 				if(map[i][j] != 'x' || cluster_map[i][j] != 0) continue;
 				else {
 					if(i == R-1) floor = 1; // 바닥이면
+					++cluster;
 					Queue<MineralInfo> queue = new LinkedList<>();
 					queue.offer(new MineralInfo(i, j, cluster, floor));
 					mlist.add(new MineralInfo(i, j, cluster, floor));
@@ -243,7 +248,6 @@ public class BOJ_2933_Mineral {
 							cluster_map[next_y][next_x] = cluster;
 						}
 					} // while end
-					cluster++; // 클러스터 번호 +1
 				}
 			}
 		}
