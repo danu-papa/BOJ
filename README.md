@@ -1,6 +1,11 @@
 # BOJ
 ---
 ### BOJ_Practice
+* [BOJ_7562_Move_Knight.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_7562_Move_Knight.java)
+* [BOJ_2933_Mineral_retry.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_2933_Mineral_retry.java)
+* [BOJ_1074_Z.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_1074_Z.java)
+* [BOJ_15686_Chicken_Delivery.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_15686_Chicken_Delivery.java)
+* [BOJ_1987_Alphabet.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_1987_Alphabet.java)
 * [BOJ_17406_Rotate_Array_4.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_17406_Rotate_Array_4.java)
 * [BOJ_2206_Move_While_Breaking_Wall.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_2206_Move_While_Breaking_Wall.java)
 * [JO_1733_Oh_Mock.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/JO_1733_Oh_Mock.java)
