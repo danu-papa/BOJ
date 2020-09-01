@@ -29,33 +29,35 @@ public class BOJ_2661_Good_Sequence {
 	 * DFS, 백트래킹
 	 * */
 	private static void findSequence(int cnt, StringBuilder sb) {
-		if(cnt == N) { // 제일 먼저 도착한 수가 가장 작은 수
+		if(cnt == N) { // 1, 2, 3을 순차적으로 돌기 때문에. 제일 먼저 도착한 수가 가장 작은 수
 			System.out.println(sb.toString());
-			System.exit(0); // 1, 2, 3을 순차적으로 돌기 때문에.
+			System.exit(0);
 		}
 		for( int i = 1; i <= 3; i++) {
-			sb.append(i);
-			if(checkSequence(sb)) {
+			sb.append(i); // 일단 문자 추가.
+			if(checkSequence(sb)) { // 유망하면 다음으로
 				findSequence(cnt+1, sb);
 			}
+			// 유망하지 않다면 제거
 			sb.deleteCharAt(sb.length()-1);
 		}
 	}
 
 	/** 앞의 수열에 더했을 때 유망한지 체크 */
 	private static boolean checkSequence(StringBuilder sb) {
-		int len = sb.length();
-		int half = len/2;
+		int len = sb.length(); // 현재까지 입력된 문자열 길이
+		int half = len/2; // 문자열의 절반.
 		int start = len - 1; // 시작점.
-		int end = len;
+		int end = len; // 문자열 끝
 		
-		for( int i = 1; i <= half; i++) {
+		// substring(start,end)
+		// start에 문자는 포함, end의 문자는 비포함.
+		for( int i = 1; i <= half; i++) { // i는 자리수를 뜻한다.
 			if(sb.substring(start - i, end - i).equals(sb.substring(start, end))) {
-				return false;
+				return false; // 해당하면 false
 			}
-			start -= 1;
+			start -= 1; // 자리수 옮김.
 		}
-		
-		return true;
+		return true; // 해당없이 왔다면 유망.
 	}
 }
