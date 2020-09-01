@@ -1,6 +1,7 @@
 # BOJ
 ---
 ### BOJ_Practice
+* [BOJ_1753_Min_Path.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_1753_Min_Path.java)
 * [BOJ_7562_Move_Knight.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_7562_Move_Knight.java)
 * [BOJ_2933_Mineral_retry.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_2933_Mineral_retry.java)
 * [BOJ_1074_Z.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_1074_Z.java)
