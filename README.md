@@ -1,6 +1,8 @@
 # BOJ
 ---
 ### BOJ_Practice
+* [BOJ_17471_Gerry_Mandering.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_17471_Gerry_Mandering.java)
+* [BOJ_17144_Goodbye_mise.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_17144_Goodbye_mise.java)
 * [BOJ_14889_Start_Link.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_14889_Start_Link.java)
 * [BOJ_1753_Min_Path.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_1753_Min_Path.java)
 * [BOJ_7562_Move_Knight.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_7562_Move_Knight.java)
