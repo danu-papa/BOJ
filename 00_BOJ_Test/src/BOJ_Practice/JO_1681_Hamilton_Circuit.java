@@ -63,6 +63,7 @@ public class JO_1681_Hamilton_Circuit {
 				if(map[pre][i] == 0) { // 이전 정점에서부터 현재 선택한 정점으로
 					continue; // 연결점이 없어요!!!!
 				}
+				// 일반 순열
 				visited[i] = true;
 				selected[idx] = i;
 				start_Delivery(idx+1, i);
@@ -75,6 +76,7 @@ public class JO_1681_Hamilton_Circuit {
 	private static int calc_distance() {
 		int distance = 0;
 		
+		// 선택한 모든 정점의 비용을 다 더해서 리턴해주자.
 		for( int i = 1; i < N; i++) {
 			int sel = map[selected[i]][selected[i+1]];
 			distance += sel;
