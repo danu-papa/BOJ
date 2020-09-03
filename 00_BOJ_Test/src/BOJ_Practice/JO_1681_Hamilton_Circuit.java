@@ -59,7 +59,7 @@ public class JO_1681_Hamilton_Circuit {
 		for( int i = 2; i <= N; i++) { // 1번은 고정. 2번부터 시작.
 			if(!visited[i]) { // 아직 선택 안함.
 				if(map[pre][i] == 0) { // 이전 정점에서부터 현재 선택한 정점으로
-					continue;
+					continue; // 연결점이 없어요!!!!
 				}
 				visited[i] = true;
 				selected[idx] = i;
