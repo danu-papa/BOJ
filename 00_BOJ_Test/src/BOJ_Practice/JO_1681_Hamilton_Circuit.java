@@ -50,6 +50,8 @@ public class JO_1681_Hamilton_Circuit {
 	 *  */
 	private static void start_Delivery(int idx, int pre) {
 		if(idx == N+1) { // 모든 정점 선택
+			// 마지막 선택한 정점이  도착지로 오지 못할 경우 다음 순열
+			if(map[selected[N]][1] == 0) return;
 			int res = calc_distance(); // 거리계산
 			if(res == -1) return; // 계산중 단절발견 다음선택으로
 			resMin = Math.min(res, resMin);
@@ -75,10 +77,8 @@ public class JO_1681_Hamilton_Circuit {
 		
 		for( int i = 1; i < N; i++) {
 			int sel = map[selected[i]][selected[i+1]];
-			if(sel == 0) return -1; // 단절 지점.
 			distance += sel;
 		}
-		if(map[selected[N]][1] == 0) return -1; // 회사로 가는 길 없음.
 		distance += map[selected[N]][1];
 		return distance;
 	}
