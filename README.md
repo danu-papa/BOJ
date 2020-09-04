@@ -1,6 +1,8 @@
 # BOJ
 ---
 ### BOJ_Practice
+* [BOJ_17472_Make_Bridge2.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_17472_Make_Bridge2.java)
+* [BOJ_16236_Baby_Shark.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_16236_Baby_Shark.java)
 * [BOJ_17471_Gerry_Mandering.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_17471_Gerry_Mandering.java)
 * [BOJ_17144_Goodbye_mise.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_17144_Goodbye_mise.java)
 * [BOJ_14889_Start_Link.java](https://github.com/NICEGINI/BOJ/blob/master/00_BOJ_Test/src/BOJ_Practice/BOJ_14889_Start_Link.java)
