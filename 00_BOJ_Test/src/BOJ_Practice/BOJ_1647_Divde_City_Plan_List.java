@@ -1,19 +1,24 @@
+/**
+ * 
+ */
 package BOJ_Practice;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
  * 백준 1647 - 도시 분할 계획 한 마을을 2개의 구역으로 나눈다. N개의 집과 M개의 길이 있다. 길은 양방향. 각 분리된 마을은 마을
- * 안에서 집들이 서로 연결이 되어있어야 한다. 필요없는 길을 모두 없애도 남은 최소의 길의 유지비를 구하자.
+ * 안에서 집들이 서로 연결이 되어있어야 한다. 필요없는 길을 모두 없애고 남은 최소의 길의 유지비를 구하자.
  * 정점10만개. 길 100만개..
  */
-public class BOJ_1647_Divde_City_Plan {
+public class BOJ_1647_Divde_City_Plan_List {
 	static class Node implements Comparable<Node>{
 		int no, weight;
 
@@ -29,8 +34,9 @@ public class BOJ_1647_Divde_City_Plan {
 	}
 	
 	// N: 집의 개수 , M: 길의 개수
-	private static int N, M, map[][], resMin, tmpres;
+	private static int N, M, resMin, tmpres;
 	private static boolean isSelected[];
+	private static List<Node>[] maplist;
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -38,7 +44,12 @@ public class BOJ_1647_Divde_City_Plan {
 
 		N = Integer.parseInt(stt.nextToken());
 		M = Integer.parseInt(stt.nextToken());
-		map = new int[N + 1][N + 1];
+		maplist = new ArrayList[N + 1];
+		
+		for(int i = 1; i <= N; i++) {
+			maplist[i] = new ArrayList<Node>();
+		}
+		
 		isSelected = new boolean[N + 1];
 
 		for (int i = 0; i < M; i++) {
@@ -46,8 +57,8 @@ public class BOJ_1647_Divde_City_Plan {
 			int first = Integer.parseInt(stt.nextToken());
 			int sec = Integer.parseInt(stt.nextToken());
 			int weight = Integer.parseInt(stt.nextToken());
-			map[first][sec] = weight;
-			map[sec][first] = weight;
+			
+			maplist[first].add(new Node(sec, weight));
 		} // input end
 
 		resMin = Integer.MAX_VALUE;
@@ -69,24 +80,13 @@ public class BOJ_1647_Divde_City_Plan {
 			if (cnt == N || cnt == 0)
 				return;
 
-			if (checkConnect()) {
-//				int tmpmap[][] = new int[N+1][N+1];
-//				for (int i = 1; i <= N; i++) {
-//					for (int j = 1; j <= N; j++) {
-//						tmpmap[i][j] = map[i][j];
-//					}
-//				}
-//				// 모두 연결이 되어있는 경우.
-//				// 분리된 두 구역간 길을 모두 끊는다.
-//				removeRoad(tmpmap);
-				
+			//if (checkConnect()) {
 				// 남은 길을 가지고 프림.
 				tmpres = 0;
-				prim(true);
-				prim(false);
+				prim();
 				
 				resMin = Math.min(resMin, tmpres);
-			}
+			//}
 
 			return;
 		}
@@ -97,22 +97,15 @@ public class BOJ_1647_Divde_City_Plan {
 	}
 
 	/** 프림알고리즘을 이용해서 연결된 마을간 MST를 찾자 */
-	private static void prim(boolean flag) {
+	private static void prim() {
 		PriorityQueue<Node> pQueue = new PriorityQueue<Node>();
 		int[] minEdge = new int[N+1];
 		Arrays.fill(minEdge, Integer.MAX_VALUE);
 		boolean visited[] = new boolean[N+1];
 		
-		int start_vertex = 0;
+		int start_vertex = 1;
+		int result = 0;
 		
-		for(int i = 1; i <= N; i++) {
-			if(isSelected[i] == flag) {
-				start_vertex = i;
-				break;
-			}
-		}
-		
-		int result = 0, nodeCnt = 1;
 		minEdge[start_vertex] = 0;
 		pQueue.offer(new Node(start_vertex,0));
 		
@@ -125,31 +118,18 @@ public class BOJ_1647_Divde_City_Plan {
 			result += minVertex.weight;
 			visited[cur_Vertex] = true;
 			
-			if(++nodeCnt == N+1) break;
-			
-			for(int j = 1; j <= N; j++) {
-				if(!visited[j] && map[cur_Vertex][j] != 0 && isSelected[j] == flag
-						&& map[cur_Vertex][j] < minEdge[j]) {
-					minEdge[j] = map[cur_Vertex][j];
-					pQueue.offer(new Node(j,map[cur_Vertex][j]));
+			for(int j = 0; j < maplist[cur_Vertex].size(); j++) {
+				Node minNode = maplist[cur_Vertex].get(j);
+				int next = minNode.no;
+				if(!visited[next] && minNode.weight != 0 && isSelected[cur_Vertex] == isSelected[next]
+						&& maplist[cur_Vertex].get(j).weight < minEdge[next]) {
+					minEdge[next] = minNode.weight;
+					pQueue.offer(new Node(next,minNode.weight));
 				}
 			}
 		}
 		
 		tmpres += result;
-	}
-
-	/** 두 구역간 길을 끊자 */
-	private static void removeRoad(int[][] tmpmap) {
-		for(int i = 1; i <= N; i++) {
-			for(int j = 1; j <= N; j++) {
-				// 선택한 정점에서 선택안한 정점중에 길이 있다(0이 아니다)
-				if(isSelected[i] && !isSelected[j] && tmpmap[i][j] != 0) {
-					tmpmap[i][j] = 0;
-					tmpmap[j][i] = 0;
-				}
-			}
-		}
 	}
 
 	/**
@@ -171,15 +151,14 @@ public class BOJ_1647_Divde_City_Plan {
 
 		while (!queue.isEmpty()) {
 			int cur = queue.poll();
-
+			
 			if (isSelected[cur]) { // 현재 정점 선택함.
-				for (int i = 1; i <= N; i++) {
-					if (arr[i]) continue;
-					if (isSelected[i]) {
-						if(map[cur][i] != 0) {
-							queue.offer(i);
-							arr[i] = true;
-						}
+				for (int i = 0; i < maplist[cur].size(); i++) {
+					int next = maplist[cur].get(i).no;
+					if (arr[next]) continue;
+					if (isSelected[next]) {
+						queue.offer(next);
+						arr[next] = true;
 					}
 				}
 			}
@@ -196,15 +175,14 @@ public class BOJ_1647_Divde_City_Plan {
 		
 		while (!queue.isEmpty()) {
 			int cur = queue.poll();
-
-			if (!isSelected[cur]) { // 현재 정점 선택함.
-				for (int i = 1; i <= N; i++) {
-					if (arr[i]) continue;
-					if (!isSelected[i]) {
-						if(map[cur][i] != 0) {
-							queue.offer(i);
-							arr[i] = true;
-						}
+			
+			if (!isSelected[cur]) { // 현재 정점 선택안함.
+				for (int i = 0; i < maplist[cur].size(); i++) {
+					int next = maplist[cur].get(i).no;
+					if (arr[next]) continue;
+					if (!isSelected[next]) {
+						queue.offer(next);
+						arr[next] = true;
 					}
 				}
 			}
