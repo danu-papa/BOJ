@@ -1,6 +1,3 @@
-/**
- * 
- */
 package BOJ_Practice;
 
 import java.util.Arrays;
@@ -49,9 +46,9 @@ public class BOJ_4485_녹색옷입은애가젤다지 {
 				}
 			}
 			int result=bfs();
-			for (int i = 0; i < N; i++) {
-				System.out.println(Arrays.toString(cost[i]));
-			}
+//			for (int i = 0; i < N; i++) {
+//				System.out.println(Arrays.toString(cost[i]));
+//			}
 			System.out.println("Problem "+(cnt++)+": "+result);
 		}
 
@@ -65,11 +62,11 @@ public class BOJ_4485_녹색옷입은애가젤다지 {
 			Cell cur=que.poll();
 			int cr=cur.r;
 			int cc=cur.c;
-			//if(cr==N-1 && cc==N-1){ break; }// 최단
-			// 있으나 마나
-			/*            if(cost[cr][cc]<cur.cost){
-                continue;
-            }*/
+//			if(cr==N-1 && cc==N-1){ break; }// 최단
+//			// 있으나 마나
+//			if(cost[cr][cc]<cur.cost){
+//                continue;
+//            }
 			for (int d = 0; d < 4; d++) {
 				int nr=cr+dr[d];
 				int nc=cc+dc[d];
