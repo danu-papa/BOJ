@@ -81,7 +81,7 @@ public class BOJ_16253_나무재태크3 {
         	// 겨울
         	for(int i = 1; i < N+1; i++) {
         		for(int j = 1; j < N+1; j++) {
-        			nutrients[i][j] += A[i][j];
+        			//nutrients[i][j] += A[i][j];
         		}
         	}
         }
