@@ -166,6 +166,7 @@ public class BOJ_19238_스타트택시 {
 		visited[taxi.y][taxi.x] = true;
 
 		while (!queue.isEmpty()) {
+			int size = queue.size();
 			int[] pos = queue.poll();
 			int y = pos[0];
 			int x = pos[1];
@@ -182,7 +183,7 @@ public class BOJ_19238_스타트택시 {
 
 			// 에너지 다 씀
 			if (energy <= 0)
-				return false;
+				continue;
 
 			for (int d = 0; d < 4; d++) {
 				int next_y = y + dy[d];
