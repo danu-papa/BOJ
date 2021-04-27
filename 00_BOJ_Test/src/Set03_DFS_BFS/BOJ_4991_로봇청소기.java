@@ -117,7 +117,9 @@ public class BOJ_4991_로봇청소기 {
 				for (int d = 0; d < 4; d++) {
 					int next_y = y + dy[d];
 					int next_x = x + dx[d];
-					if (outRange(next_y, next_x, w, h) || visited[next_y][next_x] || map[next_y][next_x] == 'x')
+					if (outRange(next_y, next_x, w, h) || 
+						visited[next_y][next_x] || 
+						map[next_y][next_x] == 'x')
 						continue;
 					queue.offer(new Point(next_y, next_x));
 					visited[next_y][next_x] = true;
